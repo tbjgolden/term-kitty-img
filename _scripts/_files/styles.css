@@ -1,0 +1,24 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.term-kitty-img-outer {
+  padding: 40px;
+}
+
+.term-kitty-img-outer > h1 {
+  font-family: monospace;
+  margin-top: 0;
+}
+
+#root {
+  border: 1px dashed #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 400px;
+}
