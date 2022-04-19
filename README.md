@@ -1,36 +1,54 @@
-# Use case
+# term-kitty-img
 
-**OSS lib development**
+Show images in your kitty terminal.
 
-- npm package
-  - supports node-browser shared env out of box
-- cli
-  - boilerplate to wire a cli to a lib
-- web
-  - this is for use during development
-  - supports live reload
+(Based on [npm:term-img](https://github.com/sindresorhus/term-img) but for kitty protocol instead of iTerm2)
 
-This is not a [node app starter](https://github.com/mrwade/ultimate-node-stack), a [web app starter](https://github.com/withastro/astro), or a [hybrid starter](https://github.com/vercel/next.js/).
+![term-kitty-img in use](./example.png)
 
-# Init
+# Install
 
 ```sh
-# The usual
-git clone https://github.com/tbjgolden/just-build.git <dir>
-cd <dir>
-npm install
-# One time init function to convert template to new project
-node _scripts/init.js
+npm install term-kitty-img
 ```
 
-# Key data
+# Usage
 
-Dev environment requires:
+```js
+import { terminalKittyImage } from "term-kitty-img";
 
-- node 10+
-- npm >= 5.2.0
+function fallback() {
+  // Return something else when not supported
+}
+
+console.log(
+  terminalKittyImage("unicorn.jpg", {
+    width: 800, // default bounding box of 600px wide
+    height: 150, // default bounding box of 600px high
+    // note: dimensions are in pixels (cannot use percentages or cells)
+    preserveAspectRatio: false, // default true
+    // note:
+    // (when false, width and height are exact, image stretches)
+    // (when true, width and height act as a contain box, image shrinks to fit)
+    fallback: () => {
+      console.error("Could not load unicorn");
+    },
+  })
+);
+```
+
+## Notes
+
+The kitty protocol is very awkward to use with Node. I was lucky to find a way to make it
+work by using spawn with stdin:inherit, if someone has a better way to solve this lmk!
+
+---
 
 Output code is ES6 and targets:
 
 - node 10+
 - All major non-dead browsers (>93%)
+
+---
+
+MIT

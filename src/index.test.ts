@@ -1,5 +1,6 @@
-import { hello } from ".";
+import { hasLocalSupport } from ".";
 
-test("hello says hello", () => {
-  expect(hello("world")).toBe(`Hello world!`);
+test("hasLocalSupport", async () => {
+  const result = await hasLocalSupport();
+  expect(result).toBe(0);
 });

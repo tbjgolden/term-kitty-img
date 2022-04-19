@@ -4,6 +4,13 @@
   "main": "_dist/cjs/index.js",
   "module": "_dist/esm/index.js",
   "types": "_dist/esm/index.d.ts",
+  "keywords": [
+    "terminal",
+    "kitty",
+    "image",
+    "node",
+    "typescript"
+  ],
   "browser": {
     "./_dist/cjs/index.js": "./_dist/cjs/index.js",
     "./_dist/esm/index.js": "./_dist/esm/index.js"
@@ -58,6 +65,13 @@
     "_dist/**/*"
   ],
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
+  },
+  "dependencies": {
+    "commander": "^9.2.0",
+    "jimp": "^0.16.1",
+    "kitty-version": "^1.0.0"
   }
 }
