@@ -11,6 +11,7 @@
     "node",
     "typescript"
   ],
+  "description": "Show images in your kitty terminal",
   "browser": {
     "./_dist/cjs/index.js": "./_dist/cjs/index.js",
     "./_dist/esm/index.js": "./_dist/esm/index.js"
