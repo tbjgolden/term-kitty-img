@@ -17,10 +17,6 @@ npm install term-kitty-img
 ```js
 import { terminalKittyImage } from "term-kitty-img";
 
-function fallback() {
-  // Return something else when not supported
-}
-
 terminalKittyImage("unicorn.jpg", {
   width: 800, // default bounding box of 600px wide
   height: 150, // default bounding box of 600px high
