@@ -63,7 +63,7 @@
     "*.{js,css,md}": "prettier --write"
   },
   "files": [
-    "_dist/**/*"
+    "_dist"
   ],
   "release": {
     "branches": [
