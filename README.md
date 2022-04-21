@@ -17,24 +17,18 @@ npm install term-kitty-img
 ```js
 import { terminalKittyImage } from "term-kitty-img";
 
-function fallback() {
-  // Return something else when not supported
-}
-
-console.log(
-  terminalKittyImage("unicorn.jpg", {
-    width: 800, // default bounding box of 600px wide
-    height: 150, // default bounding box of 600px high
-    // note: dimensions are in pixels (cannot use percentages or cells)
-    preserveAspectRatio: false, // default true
-    // note:
-    // (when false, width and height are exact, image stretches)
-    // (when true, width and height act as a contain box, image shrinks to fit)
-    fallback: () => {
-      console.error("Could not load unicorn");
-    },
-  })
-);
+terminalKittyImage("unicorn.jpg", {
+  width: 800, // default bounding box of 600px wide
+  height: 150, // default bounding box of 600px high
+  // note: dimensions are in pixels (cannot use percentages or cells)
+  preserveAspectRatio: false, // default true
+  // note:
+  // (when false, width and height are exact, image stretches)
+  // (when true, width and height act as a contain box, image shrinks to fit)
+  fallback: () => {
+    console.error("Could not load unicorn");
+  },
+});
 ```
 
 ## Notes
