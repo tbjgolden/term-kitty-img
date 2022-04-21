@@ -38,6 +38,7 @@
     "@types/ws": "^8.2.2",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
+    "commander": "^9.2.0",
     "esbuild": "^0.14.11",
     "eslint": "^8.6.0",
     "eslint-plugin-react": "^7.29.3",
@@ -71,8 +72,6 @@
     ]
   },
   "dependencies": {
-    "commander": "^9.2.0",
-    "jimp": "^0.16.1",
-    "kitty-version": "^1.0.0"
+    "jimp": "^0.16.1"
   }
 }
